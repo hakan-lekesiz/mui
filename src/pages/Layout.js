@@ -7,7 +7,7 @@ const Layout = () => {
             <aside style={{
                 background: "#c1c1c1",
                 padding: "0 40px 10px 0",
-                minHeight:"100vh"
+                minHeight: "100vh"
             }}>
                 <ul style={{
                     listStyle: "none",
@@ -23,9 +23,35 @@ const Layout = () => {
                             Checkboxes
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/radioButtons">
+                            Radio Buttons
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/selects">
+                            Selects
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/continuousSlider">
+                            ContinuousSlider
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/inputs">
+                            Inputs
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/tooltips">
+                            Tooltips
+                        </Link>
+                    </li>
+
                 </ul>
             </aside>
-            <main style={{padding:"20px"}}>
+            <main style={{ padding: "20px" }}>
                 <Outlet />
             </main>
 

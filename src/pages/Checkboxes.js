@@ -1,8 +1,9 @@
-import { FormControlLabel, Checkbox } from '@mui/material';
+import { FormControlLabel, Checkbox, Switch, Alert, Collapse } from '@mui/material';
 import { useState } from 'react';
 
 
 const Checkboxes = () => {
+    const label = { inputProps: { 'aria-label': 'Switch demo' } };
     const [isChecked, setIschecked] = useState(false);
 
     return (
@@ -15,10 +16,16 @@ const Checkboxes = () => {
                     checked={isChecked} />
             }
                 label="Kullanıcı sözleşmesini kabul ediyorum." />
-            {
-                isChecked &&
-                <p>Kullanıcı sözleşmeyi kabul etti</p>
-            }
+
+
+            <Collapse in={isChecked}>
+                <Alert severity="success">Kullanıcı sözleşmeyi kabul etti</Alert>
+            </Collapse>
+
+            <div>
+                <Switch {...label} defaultChecked />
+                <Switch {...label} color="secondary" />
+            </div>
 
         </>
     );
