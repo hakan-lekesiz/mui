@@ -1,56 +1,11 @@
 import { Link, Outlet } from "react-router-dom";
+import AsideMenu from "../components/AsideMenu";
 
 const Layout = () => {
 
     return (
         <div style={{ display: "flex" }}>
-            <aside style={{
-                background: "#c1c1c1",
-                padding: "0 40px 10px 0",
-                minHeight: "100vh"
-            }}>
-                <ul style={{
-                    listStyle: "none",
-                    padding: "10px"
-                }}>
-                    <li>
-                        <Link to="/buttons">
-                            Buttons
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/checkboxes">
-                            Checkboxes
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/radioButtons">
-                            Radio Buttons
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/selects">
-                            Selects
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/continuousSlider">
-                            ContinuousSlider
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/inputs">
-                            Inputs
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/tooltips">
-                            Tooltips
-                        </Link>
-                    </li>
-
-                </ul>
-            </aside>
+            <AsideMenu />
             <main style={{ padding: "20px" }}>
                 <Outlet />
             </main>
